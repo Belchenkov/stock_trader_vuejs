@@ -1,6 +1,6 @@
 # stock-trader
 
-> Stock Trader App
+> Stock Trader App on Vue 2, Bootstrap 4, Font Awesome 5, Transitions, Vue-Router, Vuex
 
 ## Build Setup
 
