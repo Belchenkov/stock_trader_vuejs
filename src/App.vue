@@ -1,7 +1,6 @@
 <template>
-  <div id="app">
-   <h1 class="container">
-<i class="fas fa-address-card"></i>     Stock Trader</h1>
+  <div class="container">
+    <router-view></router-view>
   </div>
 </template>
 
