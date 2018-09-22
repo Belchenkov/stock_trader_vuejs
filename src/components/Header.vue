@@ -34,7 +34,7 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
          <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="#" @click="endDay">
               <i class="fas fa-hourglass-end"></i> End Day
             </a>
         </li>
@@ -63,15 +63,24 @@
 </template>
 
 <script>
+  import { mapActions } from 'vuex'
+
   export default {
     computed: {
       funds () {
         return this.$store.getters.funds;
       }
+    },
+    methods: {
+      ...mapActions([
+        'randomizeStocks'
+      ]),
+      endDay () {
+          this.randomizeStocks();
+      }
     }
   }
 </script>
-
 
 <style>
  @import url('https://fonts.googleapis.com/css?family=Rajdhani|Righteous');
