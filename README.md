@@ -2,6 +2,8 @@
 
 > Stock Trader App on Vue 2, Bootstrap 4, Font Awesome 5, Transitions, Vue-Router, Vuex
 
+> Demo: https://vuejs-stock-trader-695a3.firebaseapp.com/
+
 ## Build Setup
 
 ``` bash

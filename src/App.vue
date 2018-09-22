@@ -2,13 +2,10 @@
   <div class="app">
     <app-header></app-header>
      <div class="container pt-3">
-       <transition name="slide">
         <router-view></router-view>
-       </transition>
-  </div>
+          </div>
 </div>
 </template>
-
 <script>
 import Header from './components/Header.vue'
 export default {
@@ -22,12 +19,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
  .slide-enter-active {
-   animation: slide-in 200ms ease-out forwards;
+   animation: slide-in 300ms ease-in forwards;
  }
  .slide-leave-active {
-   animation: slide-out 200ms ease-out forwards;
+   animation: slide-out 300ms ease-in forwards;
  }
 
  @keyframes slide-in {
