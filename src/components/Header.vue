@@ -17,7 +17,9 @@
             activeClass="active"
             tag="li"
           >
-            <a class="nav-link">Portfolio</a>
+            <a class="nav-link">
+              <i class="fas fa-book"></i> Portfolio
+            </a>
           </router-link>
           <router-link 
             to="/stocks" 
@@ -25,13 +27,18 @@
             activeClass="active"
             tag="li"
           >
-            <a class="nav-link">Stocks</a>
+            <a class="nav-link">
+              <i class="fas fa-file-invoice-dollar"></i> Stocks
+            </a>
           </router-link>
       </ul>
       <ul class="nav navbar-nav navbar-right">
          <li class="nav-item">
-            <a class="nav-link" href="#">End Day</a>
+            <a class="nav-link" href="#">
+              <i class="fas fa-hourglass-end"></i> End Day
+            </a>
         </li>
+        <li>
           <a 
             class="nav-link dropdown-toggle" 
             href="#" 
@@ -39,7 +46,7 @@
             role="button" 
             data-toggle="dropdown" 
             aria-haspopup="true" aria-expanded="false"
-          >
+          ><i class="far fa-save"></i> 
             Save & Load
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -48,10 +55,23 @@
           </div>
       </li>
       </ul>
+      <strong class="navbar-text navbar-right">
+         Funds: <i class="fas fa-dollar-sign"></i> {{ funds }}</strong>
     </div>
   </nav>
   </div>
 </template>
+
+<script>
+  export default {
+    computed: {
+      funds () {
+        return this.$store.getters.funds;
+      }
+    }
+  }
+</script>
+
 
 <style>
  @import url('https://fonts.googleapis.com/css?family=Rajdhani|Righteous');
@@ -65,5 +85,4 @@
     font-family: 'Rajdhani', sans-serif;
     text-shadow: 0 0 3px black;
   }
-
 </style>
