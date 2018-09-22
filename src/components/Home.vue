@@ -5,7 +5,7 @@
     <p>Click on 'End Day' to begin a New Day!</p>
     <hr class="my-4">
     <p class="lead">
-      Your Funds: {{ funds }}
+      Your Funds: {{ funds | currency}}
     </p>
 </div>
 </template>

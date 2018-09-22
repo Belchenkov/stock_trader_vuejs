@@ -56,7 +56,7 @@
       </li>
       </ul>
       <strong class="navbar-text navbar-right">
-         Funds: <i class="fas fa-dollar-sign"></i> {{ funds }}</strong>
+         Funds: {{ funds | currency }}</strong>
     </div>
   </nav>
   </div>

@@ -4,7 +4,7 @@
         <div class="card-header bg-info">
           <h5 class="card-title text-white">
               {{ stock.name }}
-              <small>(Price: {{ stock.price }})</small>  
+              <small>(Price: {{ stock.price | currency}})</small>  
             </h5>
         </div>
         <div class="card-body d-flex justify-content-between">
