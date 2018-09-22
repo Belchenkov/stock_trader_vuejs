@@ -38,18 +38,27 @@
               <i class="fas fa-hourglass-end"></i> End Day
             </a>
         </li>
-        <li>
+        <li 
+          class="nav-item dropdown"
+          :class="{show: isDropdownOpen}"  
+          @click="isDropdownOpen = !isDropdownOpen" 
+        >
           <a 
             class="nav-link dropdown-toggle" 
             href="#" 
-            id="navbarDropdown" 
+            id="navbarDropdown"
             role="button" 
             data-toggle="dropdown" 
-            aria-haspopup="true" aria-expanded="false"
+            aria-haspopup="true" 
+            aria-expanded="false"
           ><i class="far fa-save"></i> 
             Save & Load
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div 
+            class="dropdown-menu"
+            :class="{show: isDropdownOpen}" 
+            aria-labelledby="navbarDropdown"
+          >
             <a class="dropdown-item" href="#">Save Data</a>
             <a class="dropdown-item" href="#">Load Data</a>
           </div>
@@ -66,9 +75,14 @@
   import { mapActions } from 'vuex'
 
   export default {
+    data () {
+      return {
+        isDropdownOpen: false
+      }
+    },
     computed: {
       funds () {
-        return this.$store.getters.funds;
+        return this.$store.getters.funds
       }
     },
     methods: {
@@ -76,7 +90,7 @@
         'randomizeStocks'
       ]),
       endDay () {
-          this.randomizeStocks();
+          this.randomizeStocks()
       }
     }
   }
